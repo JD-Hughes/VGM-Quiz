@@ -2,6 +2,7 @@ var answers = [];
 var scoreTotal = 0;
 const cdnURL = "https://vgm-sounds.s3.us-west-000.backblazeb2.com"; //"https://vgm.surge.sh/bin"
 const cdnBackup = "https://vgm.netlify.app/bin";
+const cdnLocal = "bin";
 
 const searchOptions = {
     includeScore: true,
@@ -74,7 +75,7 @@ function fetchJSON() {
             for (let i = 0; i < jsonFile[j]['contents'].length; i++) {
                 var newQuestion = document.createElement("div")
                 newQuestion.className = "container";
-                newQuestion.innerHTML = `<div class="cont"><h3>${idCounter+1}</h3><input type="text" class="answer-box" id="input-${idCounter}" onchange="checkAnswer(${idCounter})" oninput="style.color = 'white'"></div><audio preload="none" id="audio-${idCounter}"><source src="${cdnURL}/5${jsonFile[j]['contents'][i]['src']}"><source src="${cdnBackup}/${jsonFile[j]['contents'][i]['src']}"></audio>`
+                newQuestion.innerHTML = `<div class="cont"><h3>${idCounter+1}</h3><input type="text" class="answer-box" id="input-${idCounter}" onchange="checkAnswer(${idCounter})" oninput="style.color = 'white'"></div><audio preload="none" id="audio-${idCounter}"><source src="${cdnLocal}/${jsonFile[j]['contents'][i]['src']}"><source src="${cdnURL}/${jsonFile[j]['contents'][i]['src']}"></audio>`
                 newDiv.appendChild(newQuestion);
 
                 var titleAnswers = [];
