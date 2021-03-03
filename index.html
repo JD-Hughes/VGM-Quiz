@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Game Music Quiz</title>
+    <script src="script/fuse.js"></script>
+    <script src="script/audiojs/audio.min.js"></script>
+    <script src="https://kit.fontawesome.com/fc6ace873d.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCJBCN81CY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-XCJBCN81CY');
+    </script>
+</head>
+
+<body id="main">
+    <h1>Video Game Music Quiz</h1>
+    <h4 style="color: grey; text-align: center;">Updated: 03/03/2021</h4>
+    <div class="slidecontainer">
+        <h2 id="scoreTotal"></h2>
+        <h3>Volume</h3>
+        <input type="range" min="0" max="100" value="100" class="slider" id="volumeSlider" onchange="adjustVolume()">
+    </div>
+    <div class="contactcontainer">
+        <h2 style="margin: 0;color: darkmagenta;">Contact Me</h2>
+        <a class="contactdetails" href="https://discordapp.com/users/185128076387155969" target="_blank"><i class="fab fa-discord"></i><b> Kami</b> #7370</a>
+        <a class="contactdetails" href="https://github.com/JD-Hughes/" target="_blank"><i class="fab fa-github"></i><b> JD-Hughes</b></a>
+        <a class="contactdetails" href="https://twitter.com/Jamie_Hughes42" target="_blank"><i class="fab fa-twitter"></i><b> @Jamie_Hughes42</b></a>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
